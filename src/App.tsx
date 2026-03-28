@@ -228,8 +228,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, category, descript
 
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isImageClicked, setIsImageClicked] = useState(false);
   const { scrollY } = useScroll();
   const location = useLocation();
+
+  const handleImageClick = () => {
+    setIsImageClicked(true);
+    setTimeout(() => {
+      setIsImageClicked(false);
+    }, 3000);
+  };
 
   useEffect(() => {
     if (location.hash) {
@@ -334,12 +342,16 @@ const Home = () => {
               <div className="absolute inset-4 rounded-full border border-lime/10 animate-[spin_15s_linear_infinite_reverse]" />
               <div id="hero-image-container" className="absolute inset-0 flex items-center justify-center">
                 <div 
-                  className="w-[90%] h-[90%] rounded-full overflow-hidden transition-all duration-500 border-4 border-white/5 shadow-2xl group cursor-pointer"
+                  onClick={handleImageClick}
+                  className="w-[90%] h-[90%] rounded-full overflow-hidden transition-all duration-500 border-4 border-white/5 shadow-2xl group cursor-pointer hover:-translate-y-4 hover:shadow-[0_20px_60px_rgba(212,255,94,0.3)]"
                 >
                   <img 
                     src="https://i.ibb.co/KzQrSfhb/Chat-GPT-Image-Mar-2.png" 
                     alt="Purobi Roy" 
-                    className="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-active:grayscale-0"
+                    className={cn(
+                      "w-full h-full object-cover transition-all duration-700",
+                      isImageClicked ? "grayscale-0" : "grayscale group-hover:grayscale-0 group-active:grayscale-0"
+                    )}
                     referrerPolicy="no-referrer"
                   />
                 </div>
