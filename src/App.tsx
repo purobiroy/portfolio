@@ -132,16 +132,17 @@ const ExperienceItem = ({ date, title, company, description }: { date: string; t
     <motion.div 
       whileHover={{ 
         y: -10, 
-        boxShadow: "0 30px 60px rgba(212,255,94,0.3)"
+        boxShadow: "0 30px 60px rgba(212,255,94,0.3)",
+        backgroundColor: "#D4FF5E"
       }}
       className="glass p-6 rounded-2xl transition-all duration-500 border border-white/5 group cursor-default"
     >
-      <span className="text-xs font-mono text-lime mb-2 block uppercase tracking-widest transition-colors">{date}</span>
-      <h3 className="text-xl font-bold mb-1 transition-colors">{title}</h3>
-      <p className="text-white/40 text-sm mb-4 font-medium uppercase tracking-wider transition-colors">{company}</p>
+      <span className="text-xs font-mono text-lime mb-2 block uppercase tracking-widest group-hover:text-black transition-colors">{date}</span>
+      <h3 className="text-xl font-bold mb-1 group-hover:text-black transition-colors">{title}</h3>
+      <p className="text-white/40 text-sm mb-4 font-medium uppercase tracking-wider group-hover:text-black transition-colors">{company}</p>
       <ul className="space-y-2">
         {description.map((item, idx) => (
-          <li key={idx} className="text-white/60 text-sm leading-relaxed transition-colors">• {item}</li>
+          <li key={idx} className="text-white/60 text-sm leading-relaxed group-hover:text-black transition-colors">• {item}</li>
         ))}
       </ul>
     </motion.div>
@@ -154,13 +155,14 @@ const EducationItem = ({ date, degree, school }: { date: string; degree: string;
     <motion.div 
       whileHover={{ 
         y: -10, 
-        boxShadow: "0 30px 60px rgba(212,255,94,0.3)"
+        boxShadow: "0 30px 60px rgba(212,255,94,0.3)",
+        backgroundColor: "#D4FF5E"
       }}
       className="glass p-6 rounded-2xl transition-all duration-500 border border-white/5 group cursor-default"
     >
-      <span className="text-xs font-mono text-lime mb-2 block uppercase tracking-widest transition-colors">{date}</span>
-      <h3 className="text-xl font-bold mb-1 transition-colors">{degree}</h3>
-      <p className="text-white/40 text-sm font-medium uppercase tracking-wider transition-colors">{school}</p>
+      <span className="text-xs font-mono text-lime mb-2 block uppercase tracking-widest group-hover:text-black transition-colors">{date}</span>
+      <h3 className="text-xl font-bold mb-1 group-hover:text-black transition-colors">{degree}</h3>
+      <p className="text-white/40 text-sm font-medium uppercase tracking-wider group-hover:text-black transition-colors">{school}</p>
     </motion.div>
   </div>
 );
@@ -216,10 +218,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, category, descript
       
       <Link 
         to={`/project/${id}`}
-        className="inline-flex items-center gap-2 text-lime font-black font-display uppercase tracking-[0.2em] text-[10px] group/link text-glow"
+        className="inline-flex items-center gap-2 text-lime font-bold uppercase tracking-widest text-xs group/link"
       >
-        See
-        <ArrowRight className="w-4 h-4 group-hover/link:translate-x-2 transition-transform animate-slide-x" />
+        Explore Project 
+        <ArrowRight className="w-4 h-4 group-hover/link:translate-x-2 transition-transform" />
       </Link>
     </div>
   </motion.div>
@@ -572,12 +574,7 @@ const Home = () => {
                         <h4 className="font-bold text-lg group-hover:text-black transition-colors">{cert.title}</h4>
                         <p className="text-white/40 text-sm uppercase tracking-widest group-hover:text-black transition-colors">{cert.issuer}</p>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-[10px] font-black font-display uppercase tracking-[0.2em] text-lime group-hover:text-black transition-all duration-500 opacity-40 group-hover:opacity-100 text-glow">
-                          See
-                        </span>
-                        <ChevronRight className="w-5 h-5 text-white/20 group-hover:text-black transition-colors animate-slide-x" />
-                      </div>
+                      <ChevronRight className="w-5 h-5 text-white/20 group-hover:text-black transition-colors" />
                     </motion.div>
                   </Link>
                 ))}
@@ -759,7 +756,7 @@ const Home = () => {
       <footer className="py-12 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <p className="text-xl font-black tracking-tighter mb-2">PUROBI ROY</p>
+            <p className="text-xl font-black tracking-tighter mb-2">P.ROY</p>
             <p className="text-white/40 text-sm tracking-widest uppercase">Growth-Focused Digital Strategist</p>
           </div>
           
