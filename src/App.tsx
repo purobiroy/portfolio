@@ -216,9 +216,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, category, descript
       
       <Link 
         to={`/project/${id}`}
-        className="inline-flex items-center gap-2 text-lime font-bold uppercase tracking-widest text-xs group/link"
+        className="inline-flex items-center gap-2 text-lime font-black font-display uppercase tracking-[0.2em] text-[10px] group/link text-glow"
       >
-        Explore Project 
+        See
         <ArrowRight className="w-4 h-4 group-hover/link:translate-x-2 transition-transform animate-slide-x" />
       </Link>
     </div>
@@ -572,7 +572,12 @@ const Home = () => {
                         <h4 className="font-bold text-lg group-hover:text-black transition-colors">{cert.title}</h4>
                         <p className="text-white/40 text-sm uppercase tracking-widest group-hover:text-black transition-colors">{cert.issuer}</p>
                       </div>
-                      <ChevronRight className="w-5 h-5 text-white/20 group-hover:text-black transition-colors animate-slide-x" />
+                      <div className="flex items-center gap-2">
+                        <span className="text-[10px] font-black font-display uppercase tracking-[0.2em] text-lime group-hover:text-black transition-all duration-500 opacity-40 group-hover:opacity-100 text-glow">
+                          See
+                        </span>
+                        <ChevronRight className="w-5 h-5 text-white/20 group-hover:text-black transition-colors animate-slide-x" />
+                      </div>
                     </motion.div>
                   </Link>
                 ))}
@@ -754,7 +759,7 @@ const Home = () => {
       <footer className="py-12 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <p className="text-xl font-black tracking-tighter mb-2">P.ROY</p>
+            <p className="text-xl font-black tracking-tighter mb-2">PUROBI ROY</p>
             <p className="text-white/40 text-sm tracking-widest uppercase">Growth-Focused Digital Strategist</p>
           </div>
           
