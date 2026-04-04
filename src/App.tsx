@@ -574,7 +574,15 @@ const Home = () => {
                         <h4 className="font-bold text-lg group-hover:text-black transition-colors">{cert.title}</h4>
                         <p className="text-white/40 text-sm uppercase tracking-widest group-hover:text-black transition-colors">{cert.issuer}</p>
                       </div>
-                      <ChevronRight className="w-5 h-5 text-white/20 group-hover:text-black transition-colors" />
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs font-bold uppercase tracking-widest text-white/20 group-hover:text-black transition-colors">see</span>
+                        <motion.div
+                          animate={{ x: [0, 5, 0] }}
+                          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                        >
+                          <ChevronRight className="w-5 h-5 text-white/20 group-hover:text-black transition-colors" />
+                        </motion.div>
+                      </div>
                     </motion.div>
                   </Link>
                 ))}
