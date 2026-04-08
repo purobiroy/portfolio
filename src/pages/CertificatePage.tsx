@@ -8,7 +8,7 @@ export const certifications = [
     id: "digital-marketing",
     title: "Digital Marketing & Analytics", 
     issuer: "Boston Institute of Analytics",
-    image: "https://i.ibb.co/CsN7gpzY/Screenshot-2026-03-26-at-11-16-01-PM.png"
+    image: "https://i.ibb.co/DHMBbNSR/bia-cert.jpg"
   },
   { 
     id: "data-science",
