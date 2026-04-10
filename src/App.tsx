@@ -601,13 +601,14 @@ const Home = () => {
             
             <div className="space-y-2">
               <ExperienceItem 
-                date="Jun 2024 – Aug 2024"
-                title="Business Analyst Intern"
-                company="IndoTech Industries"
+                date="sept 2025 – current"
+                title="Digital Marketing specialist"
+                company="ISHANAA"
                 description={[
-                  "Developed marketing dashboards (Excel, SAP, Tableau)",
-                  "Supported segmentation-based email campaigns",
-                  "Conducted CRM data analysis"
+                  "end-to-end SEO strategy, SEM",
+                  "optimized social media strategy (Instagram-focused), E-MAIL Marketing",
+                  "content & campaign strategies aligned with marketing funnel",
+                  "data-driven decision making using analytics tools (GA4, platform insights)"
                 ]}
               />
               <ExperienceItem 
@@ -617,6 +618,16 @@ const Home = () => {
                 description={[
                   "Led promotional campaigns",
                   "Created digital content & communications"
+                ]}
+              />
+              <ExperienceItem 
+                date="Jun 2024 – Aug 2024"
+                title="Business Analyst Intern"
+                company="IndoTech Industries"
+                description={[
+                  "Developed marketing dashboards (Excel, SAP, Tableau)",
+                  "Supported segmentation-based email campaigns",
+                  "Conducted CRM data analysis"
                 ]}
               />
               <ExperienceItem 
